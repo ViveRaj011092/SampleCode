@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-7M-BCU">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgo-t2-AYI">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="NqG-bl-dbj"/>
+                                </constraints>
+                                <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="addBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1TO-ls-hCZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-bv-sEU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Lcy-MB-Aag"/>
+                                </constraints>
+                                <state key="normal" title="DELETE"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dE-EJ-M0z"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-gI-cy0">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7UW-1o-gEj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SEX-J4-asw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JLJ-bv-sEU" firstAttribute="leading" secondItem="mgo-t2-AYI" secondAttribute="trailing" constant="15" id="3sP-NT-6hv"/>
+                            <constraint firstItem="0lM-7M-BCU" firstAttribute="top" secondItem="mgo-t2-AYI" secondAttribute="top" id="PIg-p2-gH0"/>
+                            <constraint firstItem="mgo-t2-AYI" firstAttribute="leading" secondItem="0lM-7M-BCU" secondAttribute="trailing" constant="36" id="Qpj-je-WYP"/>
+                            <constraint firstAttribute="trailing" secondItem="bZC-gI-cy0" secondAttribute="trailing" id="Tf6-8e-vXM"/>
+                            <constraint firstItem="bZC-gI-cy0" firstAttribute="top" secondItem="0lM-7M-BCU" secondAttribute="bottom" constant="22" id="XIO-b0-E1u"/>
+                            <constraint firstItem="0lM-7M-BCU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bmN-MK-q5f"/>
+                            <constraint firstItem="bZC-gI-cy0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bnm-MU-PYP"/>
+                            <constraint firstItem="0lM-7M-BCU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="lcl-X3-vTH"/>
+                            <constraint firstItem="bZC-gI-cy0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tcU-af-g63"/>
+                            <constraint firstItem="mgo-t2-AYI" firstAttribute="baseline" secondItem="JLJ-bv-sEU" secondAttribute="baseline" id="udB-Ev-g9y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JLJ-bv-sEU" secondAttribute="trailing" constant="30" id="xbg-5B-lyL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0lM-7M-BCU"/>
+                                <exclude reference="mgo-t2-AYI"/>
+                                <exclude reference="JLJ-bv-sEU"/>
+                                <exclude reference="bZC-gI-cy0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0lM-7M-BCU"/>
+                                <include reference="mgo-t2-AYI"/>
+                                <include reference="JLJ-bv-sEU"/>
+                                <include reference="bZC-gI-cy0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bZC-gI-cy0" id="6ti-aB-qGE"/>
+                        <outlet property="txtField" destination="0lM-7M-BCU" id="qzS-lR-R6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="305"/>
+        </scene>
+    </scenes>
+</document>
